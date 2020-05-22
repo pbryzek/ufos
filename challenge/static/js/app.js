@@ -18,8 +18,7 @@ function buildTable(data) {
     // each value as a table cell (td)
     Object.values(dataRow).forEach((val) => {
       let cell = row.append("td");
-      let escapedStr = decodeURIComponent(val)
-      cell.text(escapedStr);
+      cell.html(val);
     });
   });
 }
@@ -29,20 +28,19 @@ var filters = {};
 
 // This function will replace your handleClick function
 function updateFilters() {
-
   // Save the element, value, and id of the filter that was changed
   let thisElement = d3.select(this);
   let thisId = thisElement.property("id");
   let thisVal = thisElement.property("value");
 
+  // If a filter value was entered then add that filterId and value
+  // to the filters list. Otherwise, clear that filter from the filters object
   if (thisVal){
     filters[thisId] = thisVal.toLowerCase();
   } else {
     delete filters[thisId];
   }
-  // If a filter value was entered then add that filterId and value
-  // to the filters list. Otherwise, clear that filter from the filters object
-
+  
   // Call function to apply all filters and rebuild the table
   filterTable();
 }
