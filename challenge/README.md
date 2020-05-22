@@ -4,7 +4,8 @@
 Bootcamp Challenge 11: Module UFOs
 
 ### UFOs Home Page
-- [UFOs Home Page](./index.html)
+- ![UFOs Home Page](./index.html)
+- [UFOs Home Page Code](./index.html)
 
 ### Links Used
 - [data.js](https://courses.bootcampspot.com/courses/140/files/37171/download?wrap=1)
