@@ -19,7 +19,15 @@ The goals of this challenge are for you to:
 - Update and populate the dynamic filters and table using JavaScript and HTML.
 - Include the 5 filters from the webpage: Date, City, State, Country, Shape
 
-## Methodology, Summary, Purpose, Technologies 
+## Technologies Used
+- HTML
+- Bootstrap
+- Javascript
+- CSS
+- GIT
+- d3.js
+
+## Methodology, Summary, Purpose 
 For the Week 11 Challenge, the purpose of the assignment was to get familiar with layout out HTML using bootstrap native libraries. To take advantage of advanced processing, we utilized https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js to be able to utilize the d3 library - a data drive document javascript library used to visualize data with HTML, SVG, and CSS. All of the HTML for the challenge was stored in index.html while all the JS files were stored in static/js/ directory. 
 
 The static directory contains 3 subdirectories: css, images, and js. The css dir is where we define stylesheets for the components utilized in the index.html. For this challenge, we set the body background color and the jumbotron background image and style. The image used for the background of the jumbotron is saved in the static/images/ dir - for this challenge it was the only image used. In the js dir, we defined data.js and app.js files. data.js. Data.js defines an array defined as data with a list of entires: datetime, city, state, country, shape, durationMinutes, and comments. These are the sightings of the UFOs. App.js utilizes the data array defined in data.js from the javascript import at the bottom of the index.html file <script src="static/js/data.js"></script>. Since we define the import for app.js under the import for data.js, it allow app.js to simply utilize the data array as though it was defined in the same file and no extra imports required.
