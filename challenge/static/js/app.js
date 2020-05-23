@@ -46,19 +46,14 @@ function updateFilters() {
 }
 
 function filterTable() {
-  // Set the filteredData to the tableData
-
   // Loop through all of the filters and keep any data that
   // matches the filter values
-  // Grab the datetime value from the filter
-  let date = d3.select("#datetime").property("value");
+  // Set the filteredData to the tableData
   let filteredData = tableData;
 
   Object.entries(filters).forEach(([key,value]) => {
     filteredData = filteredData.filter(row => row[key] === value)
   });
-
-  console.log(filteredData);
 
   // Finally, rebuild the table using the filtered Data
   buildTable(filteredData);
